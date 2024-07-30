@@ -3,9 +3,9 @@ name: Vprofile IAC"
 on:
     push:
         branches:
-          - '**'
-        #    - main
-        #    - stage
+        #  - '**'
+            - main
+            - stage
         paths:
             - terraform/**
     pull_request:
@@ -19,6 +19,7 @@ env:
 # Credentials for deployment to AWS
 AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
 AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
 # S3 Bucket for the Terraform State
 BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
 AWS_REGION: us-east-1
